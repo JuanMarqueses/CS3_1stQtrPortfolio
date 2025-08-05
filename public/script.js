@@ -1,1 +1,1 @@
-// no script tag needed here
+//no need for script tags here
