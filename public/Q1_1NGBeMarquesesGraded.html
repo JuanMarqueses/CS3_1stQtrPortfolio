@@ -1,14 +1,26 @@
 <body>
     <h1>Feed Me My Snacks</h1>
     <label>
-    <form action="/action_page.php">
-      <label for="age">Enter Your Age: </label>
-      <input type="text" id="age" name="age"><br><br>
-      <label for="maxAge">Enter your Max Age: </label>
-      <input type="text" id="maxAge" name="maxAge"><br><br>
-      <label for="NumPerDay">Enter Your Number Per Day: </label>
-      <input type="text" id="numPerDay" name="numPerDay"><br><br>
-      <input type="submit" value="Accept Input">
-    </form>>
-        <script src ="script.js">
-            </script>
+      Enter your age <input id="age" ><br/>
+      Enter your Max Age <input id="MaxAge" > <br/>
+       Enter number of snacks <input id="numPerDay"> <br/><br/>
+       <p id="result"> Result : </p>
+        <button onclick="getData()"> Accept Input </button>
+      </label>
+        <script>
+          function getData() {
+            let age = document.getElementById("age").value
+            let MaxAge = document.getElementById("MaxAge").value
+            let numPerDay = document.getElementById("numPerDay").value
+            let sure = window.confirm('Sure of your numbers??')
+            if (sure){
+              let totalRequired =(Number(numPerDay) * 365) * (Number(MaxAge) - Number(age));
+              result.innerHTML = '<b>Result: You will need ' + totalRequired + " to last you until the ripe old age of " + MaxAge + "</b>";
+            }
+            else{
+              window.alert("Please Run The Code Again")
+            }
+          }
+        
+          </script>
+          </body>
