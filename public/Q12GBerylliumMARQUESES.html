@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Juan Marqueses of 9-Berylliu</h2>
+
+   Meal Price: <input id="Price" ><br/>
+    Tip: <input id="Tip" > <br/>
+    Service Charge <input id="Charge"> <br/><br/>
+    <p id="result"> Result : </p>
+    <button onclick="totalMeal()"> Accept Input </button>
+
+    <script>
+        function totalMeal() {
+              let Price = document.getElementById("Price").value
+              let Tip = document.getElementById("Tip").value
+              let Charge = document.getElementById("Charge").value
+              let sure = window.confirm("Sure of your numbers?")
+              if(sure){
+               let serviceFee = (Number(Charge) / 100) * Number(Price);
+
+                let totalCost = Number(Price) + Number(Tip) + serviceFee;
+                 result.innerHTML = 'Total Meal: ' + totalCost.toFixed(2);
+              } 
+              else{
+                window.alert("Please run the code again");
+              }
+            
+         
+        }
+    </script>
+
+</body>
+</html>
+<li><a href="./public/Q12GBerylliumMARQUESES.html"> Second Graded Exercise </a> 
+</li> 
